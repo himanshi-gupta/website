@@ -1,0 +1,275 @@
+<html>
+<head>
+<title>Menu</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<style type="text/css">
+	* {
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -80px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(20,20,20, 0.8);
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  background-color: black;
+  height: :50vh;
+}
+.myslides img{
+	margin-left: 50vh;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+  height: 25vh;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+<div class="bar">
+	<a href="home.html ">HOME</a>
+	<a href="aboutus.html ">ABOUT US</a>
+	<a href="menu.html">MENU</a>
+	<a href="contactus.html ">CONTACT US</a>
+	<a href="login.html ">LOGIN</a>
+	<a href="signup.html ">SIGN UP</a>
+</div>
+<div class="navbar" id="navbar">
+	<a href="home.html ">HOME</a>
+	<a href="aboutus.html ">ABOUT US</a>
+	<a href="menu.html">MENU</a>
+	<a href="contactus.html ">CONTACT US</a>
+	<a href="login.html ">LOGIN</a>
+	<a href="signup.html ">SIGN UP</a>
+</div>
+
+<div>
+	<img src="menubar.jpg" width="100%" height="15%">
+</div>
+
+<div class="container">
+  <div class="mySlides">
+    <img src="menu1.jpg" style="width:50%">
+  </div>
+
+  <div class="mySlides">
+    <img src="menu2.jpg" style="width:50%">
+  </div>
+
+  <div class="mySlides">
+    <img src="menu3.jpg" style="width:50%">
+  </div>
+    
+  <div class="mySlides">
+    <img src="menu4.jpg" style="width:50%">
+  </div>
+
+  <div class="mySlides">
+    <img src="menu5.jpg" style="width:50%">
+  </div>
+    
+  <div class="mySlides">
+    <img src="menu6.jpg" style="width:50%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="menu1.jpg" style="width:100%" onclick="currentSlide(1)" alt="1/6">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="menu2.jpg" style="width:100%" onclick="currentSlide(2)" alt="2/6">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="menu3.jpg" style="width:100%" onclick="currentSlide(3)" alt="3/6">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="menu4.jpg" style="width:100%" onclick="currentSlide(4)" alt="4/6">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="menu5.jpg" style="width:100%" onclick="currentSlide(5)" alt="5/6">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="menu6.jpg" style="width:100%" onclick="currentSlide(6)" alt="6/6">
+    </div>
+  </div>
+</div>
+
+<div style="height: 4vh;background-color: #222 ">
+	
+</div>
+	<div class="footer">
+		<div class="usefullinks">
+			<ul>
+				<li>USEFUL LINKS</li>
+				<li> <br></li>
+				<li><br></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign up</a></li>
+			</ul>
+		</div>
+		<div class="usefullinks">
+			<ul>
+				<li>KEEP IN TOUCH</li>
+				<li><br></li>
+				<li><br></li>
+				<li><a href="https://www.facebook.com/moodyfoody.in/photos/a.193938827999129/215291259197219/?type=3" target="_blank">facebook/@MoodyFoody.com</a></li>
+				<li><a href="https://twitter.com/TheMoodyFoody3" target="_blank">twitter.com/MoodyFoody</a></li>
+				<li><a href="https://www.instagram.com/moodyfoody.in/" target="_blank">instagram.com/MoodyFoody.in</a></li>
+			</ul>
+		</div>
+		<div class="usefullinks">
+			<ul id="cs">
+				<li>CONTACT US</li>
+				<li><br></li>
+				<li><br></li>
+				<li>Moody Foody</li>
+				<li>Block A,Rajouri Garden(near Metro station)</li>
+				<li>New Delhi-27</li>
+				<li>Tel. no. 011-23262667 , 011-23262678</li>
+				<li>mail us at - moodyfoody@gmail.com</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    document.getElementById("navbar").style.top = "0px";
+    document.getElementById("navbar").style.zIndex="100";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+
+</script>
+</body>
+</html>

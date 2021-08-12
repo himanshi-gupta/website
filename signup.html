@@ -1,0 +1,165 @@
+<html>
+<head>
+<title>Signup Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+.tab{
+	height: 100vh;
+	background-image: url("signupbg.jpg");
+	background-size: cover;
+}
+.tab h1{
+	font-size: 60px;
+	text-align: center;
+	font-family: "Lucida calligraphy";
+	color: #654321;
+}
+table
+{
+color: white;
+background-color: grey;
+border-radius: 30px;
+padding-top: 20px;
+margin-left: 37%;
+}
+#button
+{
+background-color:blue;
+color:white;
+height:35px;
+width:100px;
+border-radius:25px;
+border:none;
+margin:20px;
+box-shadow: 2px 3px 4px #000;
+}
+</style>
+</head>
+<body>
+<div class="bar">
+		<a href="home.html ">HOME</a>
+		<a href="aboutus.html ">ABOUT US</a>
+		<a href="menu.html">MENU</a>
+		<a href="contactus.html ">CONTACT US</a>
+		<a href="login.html ">LOGIN</a>
+		<a href="signup.html ">SIGN UP</a>
+	</div>
+	<div class="navbar" id="navbar">
+		<a href="home.html ">HOME</a>
+		<a href="aboutus.html ">ABOUT US</a>
+		<a href="menu.html">MENU</a>
+		<a href="contactus.html ">CONTACT US</a>
+		<a href="login.html ">LOGIN</a>
+		<a href="signup.html ">SIGN UP</a>
+	</div>
+<div class="tab">
+<br>
+<br>
+<br>
+<br>
+<h1>Sign Up </h1>
+<br>
+<br>
+<br>
+<form onsubmit="return SubmitAlert(this)">
+<table border="0" align="center" cellspacing="15" >
+<tr><td>First Name<td><input type="text" placeholder="First Name" required></td></tr>
+<tr><td>Last Name<td><input type="text" placeholder="Last Name" required></td></tr>
+<tr><td>Date of Birth<td><input type="date" placeholder="Date of Birth" required></td></tr>
+<tr><td>Gender<td><input type="radio" name="R">Male<input type="radio" name="R" required>Female</td></tr>
+<tr><td>Phone .no<td><input type="number" name="phone" maxlength="10" required></td></tr>
+<tr><td>Email Address<td><input type="Email" placeholder="eg:- abc@gmail.com" required></td></tr>
+<tr><td>Password<td><input type="Password" placeholder="Password" name="password1" required></td></tr>
+<tr><td>Confim Password<td><input type="Password" placeholder="Confirm Password" name="password2" required></td></tr>
+<tr><td align="center"colspan="2">
+<input type="Submit" id="button" value="Submit"> <input type="reset" id="button" value="reset"></td></tr>
+</table>
+</form>
+</div>
+
+	<div class="footer">
+		<div class="usefullinks">
+			<ul>
+				<li>USEFUL LINKS</li>
+				<li> <br></li>
+				<li><br></li>
+				<li><a href="home.html">Home</a></li>
+        		<li><a href="aboutus.html">About Us</a></li>
+        		<li><a href="menu.html">Menu</a></li>
+        		<li><a href="contactus.html">Contact Us</a></li>
+        		<li><a href="login.html">Login</a></li>
+        		<li><a href="signup.html">Sign up</a></li>
+			</ul>
+		</div>
+		<div class="usefullinks">
+			<ul>
+				<li>KEEP IN TOUCH</li>
+				<li><br></li>
+				<li><br></li>
+				<li><a href="https://www.facebook.com/moodyfoody.in/photos/a.193938827999129/215291259197219/?type=3" target="_blank">facebook/@MoodyFoody.com</a></li>
+				<li><a href="https://twitter.com/TheMoodyFoody3" target="_blank">twitter.com/MoodyFoody</a></li>
+				<li><a href="https://www.instagram.com/moodyfoody.in/" target="_blank">instagram.com/MoodyFoody.in</a></li>
+			</ul>
+		</div>
+		<div class="usefullinks">
+			<ul id="cs">
+				<li>CONTACT US</li>
+				<li><br></li>
+				<li><br></li>
+				<li>Moody Foody</li>
+				<li>Block A,Rajouri Garden(near Metro station)</li>
+				<li>New Delhi-27</li>
+				<li>Tel. no. 011-23262667 , 011-23262678</li>
+				<li>mail us at - moodyfoody@gmail.com</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    document.getElementById("navbar").style.top = "0px";
+    document.getElementById("navbar").style.zIndex="100";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function SubmitAlert(form)
+{	
+	p1=form.password1.value;
+	p2=form.password2.value;
+	if(p1!=p2)
+	{	alert("Password donot match, Try again...");}
+	else
+		{	alert("Signed up successfully!");
+
+		}
+}
+</script>
+</body>
+</html>

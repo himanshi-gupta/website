@@ -1,0 +1,21 @@
+<html>
+<head>
+<style>
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+</style>
+</head>
+<body>
+<h1> Welcome</h1>
+<div id="pop"  class="popup" onclick="show()"> Click here for popup</div>
+<script>
+function show()
+{	var p=document.getElementById("pop");
+	p.classList.toggle("show");
+}
+</script>
+</body>
+</html>

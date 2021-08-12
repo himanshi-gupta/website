@@ -1,0 +1,206 @@
+<html>
+<head>
+<title>Login Form Design</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+<style>
+h1{
+	margin: 0;
+	padding: 0 0 10px;
+	text-align: center;
+	font-size: 25px;
+	
+}
+.bg{
+	background-image: url("funfood.jpg");
+	height: 100vh;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.loginbox{
+	width: 400px;
+	height: 500px;
+	background: #000;
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+	margin-top: 40px;
+}
+.avtar{
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	position: absolute;
+	top: -60px;
+	left: calc(50% - 70px);
+}
+.loginbox p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	font-size: 30px;
+}
+.loginbox input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.loginbox input[type="text"], input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+.loginbox input[type="Submit"]
+{
+	border: 1;
+	outline: none;
+	height: 40px; 
+	background: #fb2525;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+.loginbox input[type="Submit"]:hover
+{
+	cursor: pointer;
+	background: #ffc107;
+	color: #000;
+}
+.loginbox a{
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+	color: darkgrey;
+}
+.loginbox a:hover
+{
+	color: #ffc107;
+}
+</style>
+</head>	
+<body>
+	<div class="bar">
+		<a href="home.html ">HOME</a>
+		<a href="aboutus.html ">ABOUT US</a>
+		<a href="menu.html">MENU</a>
+		<a href="contactus.html ">CONTACT US</a>
+		<a href="login.html ">LOGIN</a>
+		<a href="signup.html ">SIGN UP</a>
+	</div>
+	<div class="navbar" id="navbar">
+		<a href="home.html ">HOME</a>
+		<a href="aboutus.html ">ABOUT US</a>
+		<a href="menu.html">MENU</a>
+		<a href="contactus.html ">CONTACT US</a>
+		<a href="login.html ">LOGIN</a>
+		<a href="signup.html ">SIGN UP</a>
+	</div>
+	<div class="bg"> 
+	<div class="loginbox">
+	<img src="avtar.png"  class="avtar">
+		<h1>Login Here</h1>
+		<br>
+		<form method="get" action="home.html">
+			 <p>User Name</p>
+			<input type="text" name="" placeholder="Enter Username" required>
+			<br>
+			<br>
+			<p>Password</p>
+			<input type="Password" name="" placeholder="Enter Password" required>
+			<br>
+			<br>
+			<input type="Submit" name="sub" value="LOGIN">
+			<br>
+			<p><a href="#" onclick="repass()">FOGET PASSWORD?</a></p>
+			<p><a href="signup.html">DON'T HAVE AN ACCOUNT?</a></p>
+		</form>
+	</div>
+		</div>
+	<div class="footer">
+		<div class="usefullinks">
+			<ul>
+				<li>USEFUL LINKS</li>
+				<li> <br></li>
+				<li><br></li>
+		        <li><a href="home.html">Home</a></li>
+        		<li><a href="aboutus.html">About Us</a></li>
+        		<li><a href="menu.html">Menu</a></li>
+        		<li><a href="contactus.html">Contact Us</a></li>
+        		<li><a href="login.html">Login</a></li>
+        		<li><a href="signup.html">Sign up</a></li>
+			</ul>
+		</div>
+		<div class="usefullinks">
+			<ul>
+				<li>KEEP IN TOUCH</li>
+				<li><br></li>
+				<li><br></li>
+				<li><a href="https://www.facebook.com/moodyfoody.in/photos/a.193938827999129/215291259197219/?type=3" target="_blank">facebook/@MoodyFoody.com</a></li>
+				<li><a href="https://twitter.com/TheMoodyFoody3" target="_blank">twitter.com/MoodyFoody</a></li>
+				<li><a href="https://www.instagram.com/moodyfoody.in/" target="_blank">instagram.com/MoodyFoody.in</a></li>
+			</ul>
+		</div>
+		<div class="usefullinks">
+			<ul id="cs">
+				<li>CONTACT US</li>
+				<li><br></li>
+				<li><br></li>
+				<li>Moody Foody</li>
+				<li>Block A,Rajouri Garden(near Metro station)</li>
+				<li>New Delhi-27</li>
+				<li>Tel. no. 011-23262667 , 011-23262678</li>
+				<li>mail us at - moodyfoody@gmail.com</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    document.getElementById("navbar").style.top = "0px";
+    document.getElementById("navbar").style.zIndex="100";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+function repass()
+{	var x=prompt("Enter new password");
+	if(x!="")
+	{	alert("Your password is changed!");}
+}
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+</script>
+</body>
+</html>
